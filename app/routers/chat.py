@@ -4,7 +4,9 @@ from pydantic import BaseModel
 from app.services.embedding_service import gen_embeddings
 from app.database.database import getdb
 from sqlalchemy.orm import Session
-from dataset_model import Message
+from dataset_model import Message,Memory
+from app.services.memory_agent import generate_tags
+import json
 router = APIRouter()
 
 
@@ -15,6 +17,11 @@ async def websocket_connection(websocket:WebSocket,db:Session=Depends(getdb)):
     try:
        user_message=await websocket.receive_text()
        user_embeddings=gen_embeddings(user_message)
+       print("\nbefore\n")
+       await generate_tags(user_message,db)
+       print("\nafter\n")
+       
+    
        message=Message(sender="user",content=user_message,embedding=user_embeddings)
        db.add(message)
        db.commit()

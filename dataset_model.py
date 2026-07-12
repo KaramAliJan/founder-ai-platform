@@ -194,6 +194,20 @@ class Message(Base):
     )
 
 
+class Memory(Base):
+    __tablename__="memory"
+    id=Column(Integer,primary_key=True)
+    project_id=Column(Integer,ForeignKey("projects.id"))
+    content=Column(Text)
+    type=Column(String)
+    tags=Column(String)
+    importance=Column(Integer)
+    embedding=Column(Vector(1536))
+    created_at=Column(DateTime,default=datetime.utcnow)
+
+
+
+
 # ===========================
 # Decisions
 # ===========================
