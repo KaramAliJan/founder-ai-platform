@@ -1,0 +1,257 @@
+/* ── Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Reset ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── Base ── */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #0F1117;
+  color: #F9FAFB;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ── Typography ── */
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #F9FAFB;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #F9FAFB;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #F9FAFB;
+}
+
+p {
+  font-size: 13px;
+  font-weight: 400;
+  color: #D1D5DB;
+}
+
+/* ── Cards ── */
+.card {
+  background-color: #161B27;
+  border: 0.5px solid #1F2537;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  background-color: #7C6EFF;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #6357E8;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #9CA3AF;
+  border: 0.5px solid #2A2F3E;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  color: #F9FAFB;
+  border-color: #374151;
+}
+
+/* ── Inputs ── */
+input,
+textarea {
+  background-color: #161B27;
+  border: 0.5px solid #2A2F3E;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-family: 'Inter', sans-serif;
+  color: #D1D5DB;
+  outline: none;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #7C6EFF;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #6B7280;
+}
+
+/* ── Badges ── */
+.badge-p1 {
+  background-color: #2D1515;
+  color: #F87171;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+.badge-p2 {
+  background-color: #1C1C12;
+  color: #FCD34D;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+.badge-p3 {
+  background-color: #0F1C10;
+  color: #6EE7B7;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+/* ── Text colors ── */
+.text-primary {
+  color: #F9FAFB;
+}
+
+.text-secondary {
+  color: #D1D5DB;
+}
+
+.text-muted {
+  color: #9CA3AF;
+}
+
+.text-disabled {
+  color: #6B7280;
+}
+
+.text-success {
+  color: #10B981;
+}
+
+.text-warning {
+  color: #F59E0B;
+}
+
+.text-danger {
+  color: #F87171;
+}
+
+.text-brand {
+  color: #7C6EFF;
+}
+
+/* ── Background colors ── */
+.bg-app {
+  background-color: #0F1117;
+}
+
+.bg-surface {
+  background-color: #161B27;
+}
+
+.bg-raised {
+  background-color: #1F2537;
+}
+
+/* ── Layout helpers ── */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-12 {
+  gap: 12px;
+}
+
+.gap-16 {
+  gap: 16px;
+}
+
+/* ── Grid ── */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+/* ── Divider ── */
+.divider {
+  border: none;
+  border-top: 0.5px solid #1F2537;
+  margin: 12px 0;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2F3E;
+  border-radius: 4px;
+}
+
+/* ── Monospace (for code, tokens, IDs) ── */
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+}

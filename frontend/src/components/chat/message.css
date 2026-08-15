@@ -1,0 +1,50 @@
+.chat-window {
+    width: 90vw;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message.assistant {
+    justify-content: flex-start;
+}
+
+.bubble.user {
+    flex-direction: row-reverse;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 70%;
+}
+
+.bubble.assistant {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 70%;
+}
+
+.chat-window {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.message.user svg {
+    margin-right: 0px;
+    color: #1F2537;
+
+}
+
+.message.assistant svg {
+    color: #7C6EFF;
+}

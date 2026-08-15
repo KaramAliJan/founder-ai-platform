@@ -1,6 +1,20 @@
 version: "3.9"
 
 services:
+  react:
+    build: 
+     context: ./frontend
+     dockerfile: ../Dockerfile.frontend
+    container_name: react
+    ports:
+      - "3000:3000"
+    depends_on:
+      - fastapi
+    volumes:
+      - ./frontend:/app
+    stdin_open: true
+    tty: true
+
   postgres:
     image: pgvector/pgvector:pg15
     container_name: postgres
@@ -20,7 +34,10 @@ services:
       - "6379:6379"
 
   fastapi:
-    build: .
+    build: 
+      context: ./backend
+      dockerfile: ../Dockerfile.backend
+
     container_name: fastapi
     depends_on:
       - postgres
@@ -31,7 +48,8 @@ services:
       DATABASE_URL: postgresql://appuser:secretpassword@postgres:5432/mydb
       REDIS_URL: redis://redis:6379/0
     volumes:
-      - .:/app
+      - ./backend:/app
+
 
 volumes:
   postgres_data:
